@@ -3,7 +3,6 @@ name: Deploy
 on: 
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -22,14 +21,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Chechout
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
-
 
       - name: Install .NET wasm Tools
         run: dotnet workload install wasm-tools
@@ -41,7 +39,10 @@ jobs:
         run: dotnet build -c Release --no-restore
 
       - name: Publish .NET
-        run: dotnet publish /src/frontend/eNovaSoft.Web.csproj -c:Release -o docs --nologo
+        run: dotnet publish src/frontend/eNovaSoft.Web/eNovaSoft.Web.csproj -c:Release -o docs --nologo
+
+      - name: List directory structure
+        run: ls -R docs
 
       - name: Setup pages
         uses: actions/configure-pages@v4
