@@ -84,12 +84,6 @@ header .btn-solicite button:hover {
     border: 1px solid var(--color002);
 }
 
-section.slide-site .interface{
-    height: 100%;
-    width: 100%;
-    height: 410px;
-}
-
 footer{
     width: 100%;
     background-color: var(--color003);
