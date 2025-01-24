@@ -3,25 +3,66 @@
     --color002: #ff9429;
     --color003: #0c1f4d;
     --color004: #ffffff;
-    --color005: #00000054;
+    --color005: #000000dc;
 }
 
+
+section.vantagens {
+    padding: 80px 0;
+}
+
+.vantagens .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.vantagens .itens-container .img-itens img {
+    max-width: 420px;
+    border-radius: 30px;
+    border-left: 5px solid var(--color001);
+    border-bottom: 5px solid var(--color001);
+}
+
+.vantagens .itens-container .txt-itens h3 {
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagens .itens-container .txt-itens h3 span {
+    font-weight: 200;
+}
+
+
 section.slide-site{
-    background-image: url(../images/hotel-bg.jpg);
+    background-image: url(../images/bg-inicial003.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: var(--color004);
     position: relative;
-    height: 500px;
+    height: 60vh;
 }
 section.slide-site .interface{
     z-index: 2;
     position: relative;
     height: 100%;
     display: flex;
+    align-content: center;
     align-items: center;
+    flex-direction: column;
+    top: 20%;
+}
+section.slide-site .interface h3{
+    font-size: 40px;
+    font-variant: small-caps;
+}
+section.slide-site .interface h3, p, a{
+    margin: 10px 0;
 }
 section.slide-site>.overlay {
     position: absolute;
@@ -52,24 +93,22 @@ section.slide-site .conteudo p {
     margin: 20px 0;
 }
 
-section.slide-site .conteudo p span {
+section.slide-site  p span {
     display: block;
 }
 
-section.slide-site .conteudo button {
+section.slide-site  button {
     width: 220px;
-    height: 60px;
+    height: 40px;
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
     font-size: 18px;
-    transition: 2s;
-    border-radius: 20px;
+    transition: 1.3s;
+    border-radius: 10px;
 }
-section.slide-site .conteudo button:hover{
-    color: var(--color002);
-    border: 2px solid var(--color002);
+section.slide-site  button:hover{
+    color: var(--color004);
+    background-color: var(--color001);
 }
-
-

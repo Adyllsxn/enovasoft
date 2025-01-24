@@ -43,19 +43,22 @@ header .interface {
 header .logo img {
     width: 180px;
 }
-header .menu-desktop nav ul {
+header .menu-desktop nav ul li{
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .menu-desktop nav ul li {
     display: inline-block;
-    margin: 0 12px;
+    margin: 0 22px;
 }
 
 header .menu-desktop nav ul li a {
     text-decoration: none;
     color: var(--color001);
-    display: inline-block;
+    display: block;
     transition: .2s;
     font-weight: 300;
 }
@@ -83,6 +86,35 @@ header .btn-solicite button:hover {
     background-color: var(--color004);
     border: 1px solid var(--color002);
 }
+
+
+header .menu-drop{
+    position: relative;
+}
+.menu-drop .drop{
+    position: absolute;
+    background-color: var(--color004);
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    width: 180px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.6);
+    padding-top: 14px;
+}
+.menu-desktop .drop a{
+    padding: 10px;
+}
+.menu-drop:hover .drop{
+    height: 210px;
+}
+
+
+
+
+
+
+
 
 footer{
     width: 100%;
@@ -129,7 +161,7 @@ footer .footer-top .rede-socias  button{
     border-radius: 50%;
     border: none;
     background-color: transparent;
-    color: var(--color01);
+    color: var(--color004);
     font-size: 24px;
     cursor: pointer;
     margin: 0 3px;
